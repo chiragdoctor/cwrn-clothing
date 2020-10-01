@@ -6,7 +6,7 @@ import './Header.scss';
 
 const Header = ({ currentUser }) => {
   return (
-    <div class='header'>
+    <div className='header'>
       <Link className='logo-container' to='/'>
         <Logo className='logo' />
       </Link>
@@ -19,7 +19,7 @@ const Header = ({ currentUser }) => {
         </Link>
         {currentUser ? (
           <div className='option' onClick={() => auth.signOut()}>
-            SIGN OUT
+            {currentUser.displayName}| SIGN OUT
           </div>
         ) : (
           <Link className='option' to='/signin'>
